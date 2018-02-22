@@ -10,9 +10,14 @@ namespace Sodatra.Controllers
     {
         public ActionResult Index()
         {
-            //
             return View();
         }
+
+        public ActionResult Invoice()
+        {
+            return View();
+        }
+
 
         public ActionResult About()
         {
