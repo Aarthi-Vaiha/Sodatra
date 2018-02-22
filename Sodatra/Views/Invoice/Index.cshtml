@@ -1,0 +1,86 @@
+﻿@model Sodatra.Models.InvoiceModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <div class="width100">
+            <fieldset>
+                Text File
+                <div class="width27 margintop20">
+                    @Html.TextBox("textFile", "", new { type = "file", accept = "image/*", @class = "form-control" })
+                </div>
+            </fieldset>
+        </div>
+
+        <br />
+        <hr />
+        <fieldset>
+            <legend style="background-color:darkgray;">Basic Information</legend>
+
+            @*<hr />*@
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+
+            <div class="widthHeight100">
+                <div class="width20">
+                    First Name  <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("FirstName", "", new { @class = "form-control", required = true })
+                </div>
+                <div class="width20">
+                    Last Name<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("LastName", "", new { @class = "form-control", required = true })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Date Of Birth<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("DateOfBirth", "", new { @class = "datepicker form-control", required = true })
+                </div>
+                <div class="width20">
+                    Gender<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.RadioButton("Gender", "1", true, new { @class = "btn btn-primary btn-sm active", @id = "IsMale" })
+                    Male
+                    @Html.RadioButton("Gender", "2", false, new { @class = "btn btn-primary btn-sm active", @id = "IsFeMale" })
+                    Female
+                </div>
+            </div>
+            <br />
+
+        </fieldset>
+        <br />
+
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-4">
+                <input type="submit" value="Create" class="btn btn-success" />
+                <input type="button" value="Cancel" class="btn btn-danger" />
+            </div>
+        </div>
+    </div>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
