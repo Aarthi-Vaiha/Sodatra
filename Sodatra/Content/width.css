@@ -1,0 +1,531 @@
+﻿.margintop20{
+    margin-top:20px;
+}
+.marginleft10{
+    margin-left:10px;
+}
+.movebutton{
+    position: relative;
+    top: -20px;
+    left: 5px;
+}
+.widthHeight100 {
+    width: 100%;
+    height: auto;
+    /*height: 40px;*/
+}
+
+.width100 {
+    width: 100%;
+    display: inline-block;
+}
+
+.width1 {
+    width: 1%;
+    display: inline-block;
+}
+
+.width2 {
+    width: 2%;
+    display: inline-block;
+}
+
+.width3 {
+    width: 3%;
+    display: inline-block;
+}
+
+.width4 {
+    width: 4%;
+    display: inline-block;
+}
+
+.width5 {
+    width: 5%;
+    display: inline-block;
+}
+
+.width6 {
+    width: 6%;
+    display: inline-block;
+}
+
+.width7 {
+    width: 7%;
+    display: inline-block;
+}
+
+.width8 {
+    width: 8%;
+    display: inline-block;
+}
+
+.width9 {
+    width: 9%;
+    display: inline-block;
+}
+
+.width10 {
+    width: 10%;
+    display: inline-block;
+}
+
+
+.width11 {
+    width: 11%;
+    display: inline-block;
+}
+
+.width12 {
+    width: 12%;
+    display: inline-block;
+}
+
+.width13 {
+    width: 13%;
+    display: inline-block;
+}
+
+.width14 {
+    width: 14%;
+    display: inline-block;
+}
+
+.width15 {
+    width: 15%;
+    display: inline-block;
+}
+
+.width16 {
+    width: 16%;
+    display: inline-block;
+}
+
+.width17 {
+    width: 17%;
+    display: inline-block;
+}
+
+.width18 {
+    width: 18%;
+    display: inline-block;
+}
+
+.width19 {
+    width: 19%;
+    display: inline-block;
+}
+
+.width20 {
+    width: 20%;
+    display: inline-block;
+}
+
+
+.width21 {
+    width: 21%;
+    display: inline-block;
+}
+
+.width22 {
+    width: 22%;
+    display: inline-block;
+}
+
+.width23 {
+    width: 23%;
+    display: inline-block;
+}
+
+.width24 {
+    width: 24%;
+    display: inline-block;
+}
+
+.width25 {
+    width: 25%;
+    display: inline-block;
+}
+
+.width26 {
+    width: 26%;
+    display: inline-block;
+}
+
+.width27 {
+    width: 27%;
+    display: inline-block;
+}
+
+.width28 {
+    width: 28%;
+    display: inline-block;
+}
+
+.width29 {
+    width: 29%;
+    display: inline-block;
+}
+
+.width30 {
+    width: 30%;
+    display: inline-block;
+}
+
+.width31 {
+    width: 31%;
+    display: inline-block;
+}
+
+.width32 {
+    width: 32%;
+    display: inline-block;
+}
+
+.width33 {
+    width: 33%;
+    display: inline-block;
+}
+
+.width34 {
+    width: 34%;
+    display: inline-block;
+}
+
+.width35 {
+    width: 35%;
+    display: inline-block;
+}
+
+.width36 {
+    width: 36%;
+    display: inline-block;
+}
+
+.width37 {
+    width: 37%;
+    display: inline-block;
+}
+
+.width38 {
+    width: 38%;
+    display: inline-block;
+}
+
+.width39 {
+    width: 39%;
+    display: inline-block;
+}
+
+.width40 {
+    width: 40%;
+    display: inline-block;
+}
+
+.width41 {
+    width: 41%;
+    display: inline-block;
+}
+
+.width42 {
+    width: 42%;
+    display: inline-block;
+}
+
+.width43 {
+    width: 43%;
+    display: inline-block;
+}
+
+.width44 {
+    width: 44%;
+    display: inline-block;
+}
+
+.width45 {
+    width: 45%;
+    display: inline-block;
+}
+
+.width46 {
+    width: 46%;
+    display: inline-block;
+}
+
+.width47 {
+    width: 47%;
+    display: inline-block;
+}
+
+.width48 {
+    width: 48%;
+    display: inline-block;
+}
+
+.width49 {
+    width: 49%;
+    display: inline-block;
+}
+
+.width50 {
+    width: 50%;
+    display: inline-block;
+}
+
+
+
+.width51 {
+    width: 51%;
+    display: inline-block;
+}
+
+.width52 {
+    width: 52%;
+    display: inline-block;
+}
+
+.width53 {
+    width: 53%;
+    display: inline-block;
+}
+
+.width54 {
+    width: 54%;
+    display: inline-block;
+}
+
+.width55 {
+    width: 55%;
+    display: inline-block;
+}
+
+.width56 {
+    width: 56%;
+    display: inline-block;
+}
+
+.width57 {
+    width: 57%;
+    display: inline-block;
+}
+
+.width58 {
+    width: 58%;
+    display: inline-block;
+}
+
+.width59 {
+    width: 59%;
+    display: inline-block;
+}
+
+.width60 {
+    width: 60%;
+    display: inline-block;
+}
+
+
+
+
+.width61 {
+    width: 61%;
+    display: inline-block;
+}
+
+.width62 {
+    width: 62%;
+    display: inline-block;
+}
+
+.width63 {
+    width: 63%;
+    display: inline-block;
+}
+
+.width64 {
+    width: 64%;
+    display: inline-block;
+}
+
+.width65 {
+    width: 65%;
+    display: inline-block;
+}
+
+.width66 {
+    width: 66%;
+    display: inline-block;
+}
+
+.width67 {
+    width: 67%;
+    display: inline-block;
+}
+
+.width68 {
+    width: 68%;
+    display: inline-block;
+}
+
+.width69 {
+    width: 69%;
+    display: inline-block;
+}
+
+.width70 {
+    width: 70%;
+    display: inline-block;
+}
+
+
+
+.width71 {
+    width: 71%;
+    display: inline-block;
+}
+
+.width72 {
+    width: 72%;
+    display: inline-block;
+}
+
+.width73 {
+    width: 73%;
+    display: inline-block;
+}
+
+.width74 {
+    width: 74%;
+    display: inline-block;
+}
+
+.width75 {
+    width: 75%;
+    display: inline-block;
+}
+
+.width76 {
+    width: 76%;
+    display: inline-block;
+}
+
+.width77 {
+    width: 77%;
+    display: inline-block;
+}
+
+.width78 {
+    width: 78%;
+    display: inline-block;
+}
+
+.width79 {
+    width: 79%;
+    display: inline-block;
+}
+
+.width80 {
+    width: 80%;
+    display: inline-block;
+}
+
+
+
+
+.width81 {
+    width: 81%;
+    display: inline-block;
+}
+
+.width82 {
+    width: 82%;
+    display: inline-block;
+}
+
+.width83 {
+    width: 83%;
+    display: inline-block;
+}
+
+.width84 {
+    width: 84%;
+    display: inline-block;
+}
+
+.width85 {
+    width: 85%;
+    display: inline-block;
+}
+
+.width86 {
+    width: 86%;
+    display: inline-block;
+}
+
+.width87 {
+    width: 87%;
+    display: inline-block;
+}
+
+.width88 {
+    width: 88%;
+    display: inline-block;
+}
+
+.width89 {
+    width: 89%;
+    display: inline-block;
+}
+
+.width90 {
+    width: 90%;
+    display: inline-block;
+}
+
+
+
+
+.width91 {
+    width: 91%;
+    display: inline-block;
+}
+
+.width92 {
+    width: 92%;
+    display: inline-block;
+}
+
+.width93 {
+    width: 93%;
+    display: inline-block;
+}
+
+.width94 {
+    width: 94%;
+    display: inline-block;
+}
+
+.width95 {
+    width: 95%;
+    display: inline-block;
+}
+
+.width96 {
+    width: 96%;
+    display: inline-block;
+}
+
+.width97 {
+    width: 97%;
+    display: inline-block;
+}
+
+.width98 {
+    width: 98%;
+    display: inline-block;
+}
+
+.width99 {
+    width: 99%;
+    display: inline-block;
+}
