@@ -15,9 +15,18 @@
 
         <div class="width100">
             <fieldset>
-                Text File
                 <div class="width27 margintop20">
+                    Text File
+                </div>
+
+                <div class="width27 margintop20">
+                    @Html.TextBox("textFile", "", new { type = "file", accept = "text/plain*", @class = "form-control" })
+                </div>
+
+                <div class="width20">
+                    <input type="button" value="Upload" onclick="TextFileUpload();" class="btn btn-success" />
                     @Html.TextBox("TextFile", "", new { type = "file", accept = "image/*", @class = "form-control" })
+
                 </div>
             </fieldset>
         </div>
@@ -337,4 +346,11 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+<script src="~/Scripts/Sodatra/Invoice.js"></script>
+<script type="text/javascript">
+    var url_UploadFiles = '@Url.Content("~/Invoice/UploadFiles/")';
+    var url_GetTextFilesData = '@Url.Content("~/Invoice/GetTextFilesData/")';
+    </script>
 }
+
+
