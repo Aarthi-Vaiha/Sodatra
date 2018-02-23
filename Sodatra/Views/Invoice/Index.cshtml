@@ -25,6 +25,8 @@
 
                 <div class="width20">
                     <input type="button" value="Upload" onclick="TextFileUpload();" class="btn btn-success" />
+                    @Html.TextBox("TextFile", "", new { type = "file", accept = "image/*", @class = "form-control" })
+
                 </div>
             </fieldset>
         </div>
@@ -32,7 +34,7 @@
         <br />
         <hr />
         <fieldset>
-            <legend style="background-color:darkgray;">Basic Information</legend>
+            <legend style="background-color:darkgray;">Vendor Information</legend>
 
             @*<hr />*@
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -41,36 +43,290 @@
 
             <div class="widthHeight100">
                 <div class="width20">
-                    First Name  <span class="mandatorystar"> *</span>
+                    Vendor  <span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
-                    @Html.TextBox("FirstName", "", new { @class = "form-control", required = true })
+                    @Html.TextBox("Vendor", "", new { @class = "form-control", required = true, tabindex = 1 })
                 </div>
                 <div class="width20">
-                    Last Name<span class="mandatorystar"> *</span>
+                    Importer<span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
-                    @Html.TextBox("LastName", "", new { @class = "form-control", required = true })
+                    @Html.TextBox("Importer", "", new { @class = "form-control", required = true, tabindex = 2 })
                 </div>
             </div>
             <br />
             <div class="widthHeight100">
                 <div class="width20">
-                    Date Of Birth<span class="mandatorystar"> *</span>
+                    Number AV<span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
-                    @Html.TextBox("DateOfBirth", "", new { @class = "datepicker form-control", required = true })
+                    @Html.TextBox("NumberAV", "", new { @class = "datepicker form-control", required = true, tabindex = 3 })
                 </div>
                 <div class="width20">
-                    Gender<span class="mandatorystar"> *</span>
+                    Delivery<span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
+                    @Html.TextBox("Delivery", "", new { @class = "form-control", required = true, tabindex = 4 })
+                </div>
+                @*<div class="width28">
                     @Html.RadioButton("Gender", "1", true, new { @class = "btn btn-primary btn-sm active", @id = "IsMale" })
                     Male
                     @Html.RadioButton("Gender", "2", false, new { @class = "btn btn-primary btn-sm active", @id = "IsFeMale" })
                     Female
+                </div>*@
+            </div>
+            <br/>
+            <div class="widthHeight100">
+                <div class="width20">
+                    Vendor Address  <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("VendorAddress1", "", new { @class = "form-control", required = true, tabindex = 5 })
+                </div>
+                <div class="width20">
+                    Importer Address  <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("ImporterAddress1", "", new { @class = "form-control", required = true, tabindex = 6 })
+                </div>
+
+                <div class="clearfix"></div>
+                <br />
+                <div class="width20"></div>
+                <div class="width28">
+                    @Html.TextBox("VendorAddress2", "", new { @class = "form-control", required = true })
+                </div>
+                <div class="width20"></div>
+                <div class="width28">
+                    @Html.TextBox("ImporterAddress2", "", new { @class = "form-control", required = true })
+                </div>
+                <div class="clearfix"></div>
+                <br />
+                <div class="width20"></div>
+                <div class="width28">
+                    @Html.TextBox("VendorAddress3", "", new { @class = "form-control", required = true })
+                </div>
+                <div class="width20"></div>
+                <div class="width28">
+                    @Html.TextBox("ImporterAddress3", "", new { @class = "form-control", required = true })
+                </div></div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Number DPI  <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("NumberDPI", "", new { @class = "form-control", required = true, tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Date DPI<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("DateDPI", "", new { @class = "form-control", required = true, tabindex = 2 })
                 </div>
             </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Date AV  <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("DateAV", "", new { @class = "form-control", required = true, tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Telephone<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("Telephone1", "", new { @class = "form-control", required = true, tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Telephone <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("Telephone2", "", new { @class = "form-control", required = true, tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Fax<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("Fax1", "", new { @class = "form-control", required = true, tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Fax<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("Fax2", "", new { @class = "form-control", required = true, tabindex = 2 })
+                </div>          
+            
+            
+                <div class="width20">
+                    Contact <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("Contact1", "", new { @class = "form-control", required = true, tabindex = 1 })
+                </div>
+                </div>
+            <br />
+            <div class="widthHeight100">
+
+                <div class="width20">
+                    Contact <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("Contact2", "", new { @class = "form-control", required = true, tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Weight Gross(KG)<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("WeightGross", "", new { @class = "form-control", required = true, tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Weight Net(KG) <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("WeightNet", "", new { @class = "form-control", required = true, tabindex = 1 })
+                </div>
+                <div class="width20">
+                   Ninea<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("Ninea", "", new { @class = "form-control", required = true, tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Code PPM <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("CodePPM", "", new { @class = "form-control", required = true, tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Country of Orgin<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("CountryofOrgin", "", new { @class = "form-control", required = true, tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                   Tax Payer Code <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("TaxPayerCode", "", new { @class = "form-control", required = true, tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Containers and Leads<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("Containersandleads", "", new { @class = "form-control", required = true, tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Nature of Goods <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("NatureofGoods", "", new { @class = "form-control", required = true, tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Nature of Packaging<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("NatureofPackaging", "", new { @class = "form-control", required = true, tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                   Marks and Parcel Numbers <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("MarksandParcelNumbers", "", new { @class = "form-control", required = true, tabindex = 1 })
+                </div>
+                <div class="width20">
+                   Place of Entry<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("PlaceofEntry", "", new { @class = "form-control", required = true, tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    At <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("At", "", new { @class = "form-control", required = true, tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Bill<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("Bill", "", new { @class = "form-control", required = true, tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Sure <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("Sure", "", new { @class = "form-control", required = true, tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Incoterm<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("Incoterm", "", new { @class = "form-control", required = true, tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Bill of Lading or LTA <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("BillofLading", "", new { @class = "form-control", required = true, tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Total Bill<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("TotalBill", "", new { @class = "form-control", required = true, tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                   Date <span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("Date", "", new { @class = "form-control", required = true, tabindex = 1 })
+                </div>
+                <div class="width20">
+                   Motto<span class="mandatorystar"> *</span>
+                </div>
+                <div class="width28">
+                    @Html.TextBox("Motto", "", new { @class = "form-control", required = true, tabindex = 2 })
+                </div>
+            </div>
+            <br />
+               
+            <br />
             <br />
 
         </fieldset>
