@@ -8,8 +8,8 @@ namespace Sodatra.Models
     public class InvoiceModel
     {
         public List<InvoiceList> InvoiceList { get; set; }
-    }
 
+    }
     public class InvoiceList
     {
         public int No { get; set; }
@@ -63,5 +63,6 @@ namespace Sodatra.Models
         public string ValeurderéférenceenFCFA { get; set; }
 
 
+        
     }
 }
