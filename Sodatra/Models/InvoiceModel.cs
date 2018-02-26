@@ -6,35 +6,36 @@ using System.Web;
 namespace Sodatra.Models
 {
     public class InvoiceModel
+    {
         public List<InvoiceList> InvoiceList { get; set; }
-}
+    }
 
     public class InvoiceList
     {
-      public int No { get; set; }
-      public string Description { get; set; }
-      public string CodeSH { get; set; }
-      public string Usagé { get; set; }
-      public string Quantité { get; set; }
-      public string Unite { get; set; }
-      public double? FOBattestéendevise { get; set; }
-      public double? ValeurderéférenceenFCFA { get; set; }
-      public string TextFile { get; set; }
-      public string Vendor { get; set; }
-      public string Importer { get; set; }
-      public string NumberAV { get;set;}
-      public string Delivery { get;set;}
-      public string VendorAddress1 { get; set; }
-      public string ImporterAddress1 { get; set; }
-      public string VendorAddress2 { get; set; }
-      public string ImporterAddress2 { get; set; }
-      public string VendorAddress3 { get; set; }
-      public string ImporterAddress3 { get; set; }
-      public string NumberDPI { get; set; }
-      public string DateDPI { get; set; }
-      public string DateAV { get; set; }
-      public string Telephone1 { get; set; }
-      public string Telephone2 { get; set; }
+        public int No { get; set; }
+        public string Description { get; set; }
+        public string CodeSH { get; set; }
+        public string Usagé { get; set; }
+        public string Quantité { get; set; }
+        public string Unite { get; set; }
+        //public double? FOBattestéendevise { get; set; }
+        //public double? ValeurderéférenceenFCFA { get; set; }
+        public string TextFile { get; set; }
+        public string Vendor { get; set; }
+        public string Importer { get; set; }
+        public string NumberAV { get; set; }
+        public string Delivery { get; set; }
+        public string VendorAddress1 { get; set; }
+        public string ImporterAddress1 { get; set; }
+        public string VendorAddress2 { get; set; }
+        public string ImporterAddress2 { get; set; }
+        public string VendorAddress3 { get; set; }
+        public string ImporterAddress3 { get; set; }
+        public string NumberDPI { get; set; }
+        public string DateDPI { get; set; }
+        public string DateAV { get; set; }
+        public string Telephone1 { get; set; }
+        public string Telephone2 { get; set; }
         public string Fax1 { get; set; }
         public string Fax2 { get; set; }
         public string Contact1 { get; set; }
@@ -58,9 +59,9 @@ namespace Sodatra.Models
         public string TotalBill { get; set; }
         public string Date { get; set; }
         public string Motto { get; set; }
-      public string FOBattestéendevise { get; set; }
-      public string ValeurderéférenceenFCFA { get; set; }
-      
+        public string FOBattestéendevise { get; set; }
+        public string ValeurderéférenceenFCFA { get; set; }
+
 
     }
 }
