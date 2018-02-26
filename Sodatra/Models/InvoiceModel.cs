@@ -13,9 +13,9 @@ namespace Sodatra.Models
     {
       public int No { get; set; }
       public string Description { get; set; }
-      public double? CodeSH { get; set; }
+      public string CodeSH { get; set; }
       public string Usagé { get; set; }
-      public decimal? Quantité { get; set; }
+      public string Quantité { get; set; }
       public string Unite { get; set; }
       public double? FOBattestéendevise { get; set; }
       public double? ValeurderéférenceenFCFA { get; set; }
@@ -58,6 +58,9 @@ namespace Sodatra.Models
         public string TotalBill { get; set; }
         public string Date { get; set; }
         public string Motto { get; set; }
+      public string FOBattestéendevise { get; set; }
+      public string ValeurderéférenceenFCFA { get; set; }
+      
 
     }
 }

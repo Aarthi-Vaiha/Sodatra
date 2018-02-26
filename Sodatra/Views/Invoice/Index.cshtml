@@ -331,6 +331,34 @@
 
         </fieldset>
         <br />
+        <div class="width100">
+            <div class="width5">
+                No
+            </div>
+            <div class="width30">
+                Description
+            </div>
+            <div class="width15">
+                CodeSH
+            </div>
+            <div class="width5">
+                Usagé
+            </div>
+            <div class="width10">
+                Quantité
+            </div>
+            <div class="width5">
+                Unite
+            </div>
+            <div class="width10">
+                FOBattestéendevise
+            </div>
+            <div class="width15">
+                ValeurderéférenceenFCFA
+            </div>
+        </div>
+        <div id="DescriptionList">
+        </div>
 
         <br />
         <div class="form-group">
@@ -346,10 +374,10 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-<script src="~/Scripts/Sodatra/Invoice.js"></script>
-<script type="text/javascript">
-    var url_UploadFiles = '@Url.Content("~/Invoice/UploadFiles/")';
-    var url_GetTextFilesData = '@Url.Content("~/Invoice/GetTextFilesData/")';
+    <script src="~/Scripts/Sodatra/Invoice.js"></script>
+    <script type="text/javascript">
+        var url_UploadFiles = '@Url.Content("~/Invoice/UploadFiles/")';
+        var url_GetTextFilesData = '@Url.Content("~/Invoice/GetTextFilesData/")';
     </script>
 }
 

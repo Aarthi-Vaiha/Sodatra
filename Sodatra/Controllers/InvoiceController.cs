@@ -67,7 +67,8 @@ namespace Sodatra.Controllers
                     }
                     // Returns message that successfully uploaded  
                     // return Json(logotostoreindb + "$" + optionlogotostoreindb);
-                    return logotostoreindb;
+                    // return logotostoreindb;
+                    return filepath;
                 }
                 catch (Exception ex)
                 {
@@ -80,14 +81,16 @@ namespace Sodatra.Controllers
             }
         }
 
-        public JsonResult GetTextFilesData()
+        public JsonResult GetTextFilesData(string FileDirectory)
         {
             try
             {
 
-                
-                /// var fileName = UploadFiles();
-                var fileName = "D:\\Source\\Sodatra\\files\\Scan text_org.txt";
+
+
+                //  var fileName = FileDirectory;
+                var fileName = UploadFiles();
+                // fileName = "D:\\Source\\Sodatra\\files\\Scan text_org.txt";
                 //System.IO.StreamReader file =  new System.IO.StreamReader(@"c:\test.txt");
                 System.IO.StreamReader file = new System.IO.StreamReader(fileName);
 
@@ -97,44 +100,68 @@ namespace Sodatra.Controllers
                 model.InvoiceList = new List<InvoiceList>();
                 for (int i = 0; i < textFileList.Count(); i++)
                 {
-                    if (textFileList[i].Replace(" ", "") == "No.DescriptionCodeSHUnitéendeviseenFCFA")
+                    if (textFileList[i].Replace(" ", "") == "No.DescriptionCodeSHUnitéendeviseenFCFA" || textFileList[i].Replace(" ", "") == "No.DescriptionCodeSHUniteendeviseenFCFA")
                     {
+                        bool addListValue = true;
                         i++;
+                        var invoiceList = new InvoiceList();
+
                         for (int j = i; j < textFileList.Count(); j++)
                         {
-                            var words = textFileList[j].Split(new[] { "", " ", "     " }, StringSplitOptions.RemoveEmptyEntries);
-                            var rowList = textFileList[j].Split(' ');
-                            rowList = textFileList[j].Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);// 2 space
+                            var rowList = textFileList[j].Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);// 2 space
+                            var futureRowList = (textFileList.Count() == (j + 1)) ? textFileList[(j)].Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries) : textFileList[(j + 1)].Split(new[] { "  " }, StringSplitOptions.RemoveEmptyEntries);// 2 space
                             var usageCount = textFileList[j].Split(new[] { "      " }, StringSplitOptions.RemoveEmptyEntries); // 6 space
-
-                            var invoiceList = new InvoiceList();
-                            invoiceList.No = Convert.ToInt32(rowList[0]);
-                            invoiceList.Description = rowList[1];
-                            invoiceList.CodeSH =Convert.ToDouble( rowList[2]);
-                            if (usageCount.Count() >= 2)
+                            if (rowList.Count() != 0)
                             {
-                                invoiceList.Usagé = usageCount.Count() == 2 ? string.Empty : rowList[3];
-                                invoiceList.Quantité = Convert.ToDecimal(rowList[3]);
-                                invoiceList.Usagé = rowList[4];
-                                invoiceList.FOBattestéendevise = Convert.ToDouble(rowList[5]);
-                                invoiceList.ValeurderéférenceenFCFA = Convert.ToDouble(rowList[6]);
+                                if (rowList.Count() == 2 && rowList[0] == "'----_ .. -" && rowList[1] == " COT€CNA ")
+                                {
+                                    addListValue = false;
+                                }
+                                else if (textFileList[j].Replace(" ", "") == "No.DescriptionCodeSHUnitéendeviseenFCFA" || textFileList[j].Replace(" ", "") == "No.DescriptionCodeSHUniteendeviseenFCFA")
+                                {
+                                    addListValue = true;
+                                }
+                                else if (addListValue)
+                                {
+                                    if (rowList.Count() >= 7)
+                                    {
+                                        invoiceList.No = Convert.ToInt32(rowList[0]);
+                                        invoiceList.Description = rowList[1];
+                                        invoiceList.CodeSH = rowList[2];
+                                        if (usageCount.Count() >= 2)
+                                        {
+                                            invoiceList.Usagé = string.Empty;
+                                            invoiceList.Quantité = rowList[3];
+                                            invoiceList.Unite = rowList[4];
+                                            invoiceList.FOBattestéendevise = rowList[5];
+                                            invoiceList.ValeurderéférenceenFCFA = rowList[6];
+                                        }
+                                        else
+                                        {
+                                            invoiceList.Usagé = rowList[3];
+                                            invoiceList.Quantité = rowList[4];
+                                            invoiceList.Unite = rowList[5];
+                                            invoiceList.FOBattestéendevise = rowList[6];
+                                            invoiceList.ValeurderéférenceenFCFA = rowList[7];
+                                        }
+                                    }
+                                    else
+                                    {
+                                        invoiceList.Description = invoiceList.Description + " " + rowList[0];
+                                    }
+                                    if (futureRowList.Count() >= 7 || (textFileList.Count() == (j + 1)) || (invoiceList.CodeSH != "" && rowList.Count() == 2 && rowList[0] == "'----_ .. -" && rowList[1] == " COT€CNA "))
+                                    {
+                                        model.InvoiceList.Add(invoiceList);
+                                        invoiceList = new InvoiceList();
+                                    }
+                                }
                             }
-                            else
-                            {
-                                invoiceList.Usagé = usageCount.Count() == 2 ? string.Empty : rowList[3];
-                                invoiceList.Quantité = Convert.ToDecimal(rowList[4]);
-                                invoiceList.Usagé = rowList[5];
-                                invoiceList.FOBattestéendevise = Convert.ToDouble(rowList[6]);
-                                invoiceList.ValeurderéférenceenFCFA = Convert.ToDouble(rowList[7]);
-                            }
 
-                            model.InvoiceList.Add(invoiceList);
-
-                            //for (int k = 0; k < words.Count(); k++)
-                            //{
-
-                            //}
                         }
+
+                        var DDD = model.InvoiceList;
+                        return Json(model);
+
                         //textBox50.Text = words[0];
                     }
                 }
