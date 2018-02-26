@@ -85,9 +85,7 @@ namespace Sodatra.Controllers
         {
             try
             {
-
-
-
+                 
                 //  var fileName = FileDirectory;
                 var fileName = UploadFiles();
                 // fileName = "D:\\Source\\Sodatra\\files\\Scan text_org.txt";
@@ -149,7 +147,7 @@ namespace Sodatra.Controllers
                                     {
                                         invoiceList.Description = invoiceList.Description + " " + rowList[0];
                                     }
-                                    if (futureRowList.Count() >= 7 || (textFileList.Count() == (j + 1)) || (invoiceList.CodeSH != "" && rowList.Count() == 2 && rowList[0] == "'----_ .. -" && rowList[1] == " COT€CNA "))
+                                    if (futureRowList.Count() >= 7 || (textFileList.Count() == (j + 1)) || (invoiceList.CodeSH != "" && futureRowList.Count() == 2 && futureRowList[0] == "'----_ .. -" && futureRowList[1] == " COT€CNA "))
                                     {
                                         model.InvoiceList.Add(invoiceList);
                                         invoiceList = new InvoiceList();
