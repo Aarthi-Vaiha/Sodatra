@@ -51,9 +51,57 @@ function TextFileUpload(val) {
     });
 }
 
+function AssignPersonnelData(data) {
+    if(data.length != 0)
+    {
+        $("#Vendor").val(data.Vendor);
+        $("#Importer").val(data.Importer);
+        $("#NumberAV").val(data.NumberAV);
+        $("#Delivery").val(data.Delivery);  
+        $("#VendorAddress1").val(data.VendorAddress1);  
+        $("#ImporterAddress1").val(data.ImporterAddress1);  
+        $("#VendorAddress2").val(data.VendorAddress2);  
+        $("#ImporterAddress2").val(data.ImporterAddress2);  
+        $("#VendorAddress3").val(data.VendorAddress3);  
+        $("#ImporterAddress3").val(data.ImporterAddress3);  
+        $("#NumberDPI").val(data.NumberDPI);
+        $("#DateDPI").val(data.DateDPI);  
+        $("#DateAV").val(data.DateAV);  
+        $("#VendorTelephone").val(data.VendorTelephone);  
+        $("#ImporterTelephone").val(data.ImporterTelephone);  
+        $("#VendorFax").val(data.VendorFax);  
+        $("#ImporterFax").val(data.ImporterFax);  
+        $("#VendorContact").val(data.VendorContact);  
+        $("#ImporterContact").val(data.ImporterContact);  
+        $("#WeightGross").val(data.WeightGross);  
+        $("#WeightNet").val(data.WeightNet); 
+        $("#Ninea").val(data.Ninea);  
+        $("#CodePPM").val(data.CodePPM); 
+        $("#CountryofOrgin").val(data.CountryofOrgin);  
+        $("#TaxPayerCode").val(data.TaxPayerCode);  
+        $("#Containersandleads").val(data.Containersandleads); 
+        $("#NatureofGoods").val(data.NatureofGoods);  
+        $("#NatureofPackaging").val(data.NatureofPackaging);  
+        $("#MarksandParcelNumbers").val(data.MarksandParcelNumbers);  
+        $("#PlaceofEntry").val(data.PlaceofEntry);  
+        $("#At").val(data.At); 
+        $("#The").val(data.The);  
+        $("#Bill").val(data.Bill); 
+        $("#Sure").val(data.Sure);  
+        $("#Incoterm").val(data.Incoterm);  
+        $("#BillofLading").val(data.BillofLading);  
+        $("#TotalBill").val(data.TotalBill);  
+        $("#Date").val(data.Date);
+        $("#Motto").val(data.Motto);
 
+        
+        
+    }
+}
 
 function AssignData(data) {
+    AssignPersonnelData(data);
+
     var cnt = 0;
     var htm = '';
 
