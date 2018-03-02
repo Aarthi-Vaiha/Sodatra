@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
- 
+
         <div class="width100">
             <fieldset>
                 <div class="width27 margintop20">
@@ -20,12 +20,14 @@
                 </div>
 
                 <div class="width27 margintop20">
-                    @Html.TextBox("textFile", "", new { type = "file", accept = "text/plain*", @class = "form-control" })
+                    <input type="file" id="textFile" class = "form-control" accept = "text/txt*" value="">
+                    @*@Html.TextBox("textFile", "", new { type = "file",   @class = "form-control" })*@
+                    @*@Html.TextBox("textFile", "", new { type = "file", accept = "text/plain*", @class = "form-control" })*@
                 </div>
 
-                <div class="width20">
+                @*<div class="width20">
                     <input type="button" value="Upload" onclick="TextFileUpload();" class="btn btn-success" />
-                </div>
+                </div>*@
             </fieldset>
         </div>
         <br />
@@ -68,9 +70,9 @@
                 <div class="width28">
                     @Html.TextBox("Delivery", "", new { @class = "form-control", required = true, tabindex = 4 })
                 </div>
-               
+ 
             </div>
-            <br/>
+            <br />
             <div class="widthHeight100">
                 <div class="width20">
                     Vendor Address  <span class="mandatorystar"> *</span>
@@ -104,7 +106,8 @@
                 <div class="width20"></div>
                 <div class="width28">
                     @Html.TextBox("ImporterAddress3", "", new { @class = "form-control", required = true })
-                </div></div>
+                </div>
+            </div>
             <br />
             <div class="widthHeight100">
                 <div class="width20">
@@ -156,17 +159,24 @@
                     Fax<span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
+//<<<<<<< mahalingam
+                    @Html.TextBox("Fax2", "", new { @class = "form-control", required = true, tabindex = 2 })
+                </div>
+
+
+//=======
                     @Html.TextBox("ImporterFax", "", new { @class = "form-control", required = true, tabindex = 2 })
                 </div>          
             
             
+//>>>>>>> master
                 <div class="width20">
                     Contact <span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
                     @Html.TextBox("VendorContact", "", new { @class = "form-control", required = true, tabindex = 1 })
                 </div>
-                </div>
+            </div>
             <br />
             <div class="widthHeight100">
 
@@ -192,7 +202,7 @@
                     @Html.TextBox("WeightNet", "", new { @class = "form-control", required = true, tabindex = 1 })
                 </div>
                 <div class="width20">
-                   Ninea<span class="mandatorystar"> *</span>
+                    Ninea<span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
                     @Html.TextBox("Ninea", "", new { @class = "form-control", required = true, tabindex = 2 })
@@ -216,7 +226,7 @@
             <br />
             <div class="widthHeight100">
                 <div class="width20">
-                   Tax Payer Code <span class="mandatorystar"> *</span>
+                    Tax Payer Code <span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
                     @Html.TextBox("TaxPayerCode", "", new { @class = "form-control", required = true, tabindex = 1 })
@@ -246,13 +256,13 @@
             <br />
             <div class="widthHeight100">
                 <div class="width20">
-                   Marks and Parcel Numbers <span class="mandatorystar"> *</span>
+                    Marks and Parcel Numbers <span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
                     @Html.TextBox("MarksandParcelNumbers", "", new { @class = "form-control", required = true, tabindex = 1 })
                 </div>
                 <div class="width20">
-                   Place of Entry<span class="mandatorystar"> *</span>
+                    Place of Entry<span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
                     @Html.TextBox("PlaceofEntry", "", new { @class = "form-control", required = true, tabindex = 2 })
@@ -306,20 +316,20 @@
             <br />
             <div class="widthHeight100">
                 <div class="width20">
-                   Date <span class="mandatorystar"> *</span>
+                    Date <span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
                     @Html.TextBox("Date", "", new { @class = "form-control", required = true, tabindex = 1 })
                 </div>
                 <div class="width20">
-                   Motto<span class="mandatorystar"> *</span>
+                    Motto<span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
                     @Html.TextBox("Motto", "", new { @class = "form-control", required = true, tabindex = 2 })
                 </div>
             </div>
             <br />
-               
+
             <br />
             <br />
 
@@ -338,17 +348,19 @@
             <div class="width5">
                 Usagé
             </div>
-            <div class="width10">
+            <div class="width9">
                 Quantité
             </div>
-            <div class="width5">
+            <div class="width6">
                 Unite
             </div>
             <div class="width10">
-                FOBattestéendevise
+                FOBattesté
+                @*FOBattestéendevise*@
             </div>
             <div class="width15">
-                ValeurderéférenceenFCFA
+                FCFA
+                @*ValeurderéférenceenFCFA*@
             </div>
         </div>
         <div id="DescriptionList">

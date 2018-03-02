@@ -1,14 +1,6 @@
-﻿
-
-$('#textFile').change(function (event) {
-    var tmppath = URL.createObjectURL(event.target.files[0]);
-    alert(tmppath);
-
-});
-
-function TextFileUpload() {
+﻿$('input[type=file]').change(function () {
+    $("#DescriptionList").empty();  
     if (window.FormData !== undefined) {
-
         var fileUpload = $("#textFile").get(0);
         var files = fileUpload.files;
 
@@ -23,15 +15,16 @@ function TextFileUpload() {
         //// fileData.append('username', ‘Manas’);  
         $.ajax({
             // url: url_UploadFiles,
-            url: url_GetTextFilesData,
+            url: url_UploadFiles,
             type: "POST",
             contentType: false, // Not to set any content header  
             processData: false, // Not to process data  
             data: fileData,
             //data: { FileDirectory: $("#textFile").val() },
-            dataType: 'json',
+            dataType: 'text',
             success: function (data) {
-                AssignData(data);
+                if (data != "")
+                    TextFileUpload(data);
             },
             error: function (err) {
                 alert(err.statusText);
@@ -40,6 +33,22 @@ function TextFileUpload() {
     } else {
         alert("FormData is not supported.");
     }
+});
+
+function TextFileUpload(val) {
+    $.ajax({
+        // url: url_UploadFiles,
+        url: url_GetTextFilesData,
+        type: "POST",
+        data: { FileDirectory: val },
+        dataType: 'json',
+        success: function (data) {
+            AssignData(data);
+        },
+        error: function (err) {
+            alert(err.statusText);
+        }
+    });
 }
 
 function AssignPersonnelData(data) {
@@ -95,6 +104,9 @@ function AssignData(data) {
 
     var cnt = 0;
     var htm = '';
+
+    //   $("#DescriptionList").remove();
+    $("#DescriptionList").empty();
     if (data != "") {
 
         for (var i = 0; i < data.InvoiceList.length; i++) {
@@ -113,10 +125,10 @@ function AssignData(data) {
             htm += '<div class="width5 ">';
             htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__Usagé" name="InvoiceList[' + cnt + '].Usagé" type="text" value="' + data.InvoiceList[cnt].Usagé + '" />';
             htm += '</div>';
-            htm += '<div class="width10 ">';
+            htm += '<div class="width9 ">';
             htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__Quantité" name="InvoiceList[' + cnt + '].Quantité" type="text" value="' + data.InvoiceList[cnt].Quantité + '" />';
             htm += '</div>';
-            htm += '<div class="width5 ">';
+            htm += '<div class="width6 ">';
             htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__Unite" name="InvoiceList[' + cnt + '].Unite" type="text" value="' + data.InvoiceList[cnt].Unite + '" />';
             htm += '</div>';
             htm += '<div class="width10 ">';
