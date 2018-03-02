@@ -43,7 +43,9 @@
                     Vendor  <span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
-                    @Html.TextBox("Vendor", "", new { @class = "form-control", required = true, tabindex = 1 })
+                  @Html.TextBox("Vendor", "", new { @class = "form-control", required = true, tabindex = 1 })
+                    @*@Html.TextBoxFor(m => m.Vendor, new { @class = "form-control", required = true, tabindex = 1 })*@
+                    
                 </div>
                 <div class="width20">
                     Importer<span class="mandatorystar"> *</span>
@@ -66,12 +68,7 @@
                 <div class="width28">
                     @Html.TextBox("Delivery", "", new { @class = "form-control", required = true, tabindex = 4 })
                 </div>
-                @*<div class="width28">
-                    @Html.RadioButton("Gender", "1", true, new { @class = "btn btn-primary btn-sm active", @id = "IsMale" })
-                    Male
-                    @Html.RadioButton("Gender", "2", false, new { @class = "btn btn-primary btn-sm active", @id = "IsFeMale" })
-                    Female
-                </div>*@
+               
             </div>
             <br/>
             <div class="widthHeight100">
@@ -135,7 +132,7 @@
                     Telephone<span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
-                    @Html.TextBox("Telephone1", "", new { @class = "form-control", required = true, tabindex = 2 })
+                    @Html.TextBox("VendorTelephone", "", new { @class = "form-control", required = true, tabindex = 2 })
                 </div>
             </div>
             <br />
@@ -144,13 +141,13 @@
                     Telephone <span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
-                    @Html.TextBox("Telephone2", "", new { @class = "form-control", required = true, tabindex = 1 })
+                    @Html.TextBox("ImporterTelephone", "", new { @class = "form-control", required = true, tabindex = 1 })
                 </div>
                 <div class="width20">
                     Fax<span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
-                    @Html.TextBox("Fax1", "", new { @class = "form-control", required = true, tabindex = 2 })
+                    @Html.TextBox("VendorFax", "", new { @class = "form-control", required = true, tabindex = 2 })
                 </div>
             </div>
             <br />
@@ -159,7 +156,7 @@
                     Fax<span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
-                    @Html.TextBox("Fax2", "", new { @class = "form-control", required = true, tabindex = 2 })
+                    @Html.TextBox("ImporterFax", "", new { @class = "form-control", required = true, tabindex = 2 })
                 </div>          
             
             
@@ -167,7 +164,7 @@
                     Contact <span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
-                    @Html.TextBox("Contact1", "", new { @class = "form-control", required = true, tabindex = 1 })
+                    @Html.TextBox("VendorContact", "", new { @class = "form-control", required = true, tabindex = 1 })
                 </div>
                 </div>
             <br />
@@ -177,7 +174,7 @@
                     Contact <span class="mandatorystar"> *</span>
                 </div>
                 <div class="width28">
-                    @Html.TextBox("Contact2", "", new { @class = "form-control", required = true, tabindex = 1 })
+                    @Html.TextBox("ImporterContact", "", new { @class = "form-control", required = true, tabindex = 1 })
                 </div>
                 <div class="width20">
                     Weight Gross(KG)<span class="mandatorystar"> *</span>
