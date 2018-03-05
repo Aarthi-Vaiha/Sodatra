@@ -1,5 +1,5 @@
 ﻿$('input[type=file]').change(function () {
-    $("#DescriptionList").empty();  
+    $("#DescriptionList").empty();
     if (window.FormData !== undefined) {
         var fileUpload = $("#textFile").get(0);
         var files = fileUpload.files;
@@ -52,50 +52,49 @@ function TextFileUpload(val) {
 }
 
 function AssignPersonnelData(data) {
-    if(data.length != 0)
-    {
+    if (data.length != 0) {
         $("#Vendor").val(data.Vendor);
         $("#Importer").val(data.Importer);
         $("#NumberAV").val(data.NumberAV);
-        $("#Delivery").val(data.Delivery);  
-        $("#VendorAddress1").val(data.VendorAddress1);  
-        $("#ImporterAddress1").val(data.ImporterAddress1);  
-        $("#VendorAddress2").val(data.VendorAddress2);  
-        $("#ImporterAddress2").val(data.ImporterAddress2);  
-        $("#VendorAddress3").val(data.VendorAddress3);  
-        $("#ImporterAddress3").val(data.ImporterAddress3);  
+        $("#Delivery").val(data.Delivery);
+        $("#VendorAddress1").val(data.VendorAddress1);
+        $("#ImporterAddress1").val(data.ImporterAddress1);
+        $("#VendorAddress2").val(data.VendorAddress2);
+        $("#ImporterAddress2").val(data.ImporterAddress2);
+        $("#VendorAddress3").val(data.VendorAddress3);
+        $("#ImporterAddress3").val(data.ImporterAddress3);
         $("#NumberDPI").val(data.NumberDPI);
-        $("#DateDPI").val(data.DateDPI);  
-        $("#DateAV").val(data.DateAV);  
-        $("#VendorTelephone").val(data.VendorTelephone);  
-        $("#ImporterTelephone").val(data.ImporterTelephone);  
-        $("#VendorFax").val(data.VendorFax);  
-        $("#ImporterFax").val(data.ImporterFax);  
-        $("#VendorContact").val(data.VendorContact);  
-        $("#ImporterContact").val(data.ImporterContact);  
-        $("#WeightGross").val(data.WeightGross);  
-        $("#WeightNet").val(data.WeightNet); 
-        $("#Ninea").val(data.Ninea);  
-        $("#CodePPM").val(data.CodePPM); 
-        $("#CountryofOrgin").val(data.CountryofOrgin);  
-        $("#TaxPayerCode").val(data.TaxPayerCode);  
-        $("#Containersandleads").val(data.Containersandleads); 
-        $("#NatureofGoods").val(data.NatureofGoods);  
-        $("#NatureofPackaging").val(data.NatureofPackaging);  
-        $("#MarksandParcelNumbers").val(data.MarksandParcelNumbers);  
-        $("#PlaceofEntry").val(data.PlaceofEntry);  
-        $("#At").val(data.At); 
-        $("#The").val(data.The);  
-        $("#Bill").val(data.Bill); 
-        $("#Sure").val(data.Sure);  
-        $("#Incoterm").val(data.Incoterm);  
-        $("#BillofLading").val(data.BillofLading);  
-        $("#TotalBill").val(data.TotalBill);  
+        $("#DateDPI").val(data.DateDPI);
+        $("#DateAV").val(data.DateAV);
+        $("#VendorTelephone").val(data.VendorTelephone);
+        $("#ImporterTelephone").val(data.ImporterTelephone);
+        $("#VendorFax").val(data.VendorFax);
+        $("#ImporterFax").val(data.ImporterFax);
+        $("#VendorContact").val(data.VendorContact);
+        $("#ImporterContact").val(data.ImporterContact);
+        $("#WeightGross").val(data.WeightGross);
+        $("#WeightNet").val(data.WeightNet);
+        $("#Ninea").val(data.Ninea);
+        $("#CodePPM").val(data.CodePPM);
+        $("#CountryofOrgin").val(data.CountryofOrgin);
+        $("#TaxPayerCode").val(data.TaxPayerCode);
+        $("#Containersandleads").val(data.Containersandleads);
+        $("#NatureofGoods").val(data.NatureofGoods);
+        $("#NatureofPackaging").val(data.NatureofPackaging);
+        $("#MarksandParcelNumbers").val(data.MarksandParcelNumbers);
+        $("#PlaceofEntry").val(data.PlaceofEntry);
+        $("#At").val(data.At);
+        $("#The").val(data.The);
+        $("#Bill").val(data.Bill);
+        $("#Sure").val(data.Sure);
+        $("#Incoterm").val(data.Incoterm);
+        $("#BillofLading").val(data.BillofLading);
+        $("#TotalBill").val(data.TotalBill);
         $("#Date").val(data.Date);
         $("#Motto").val(data.Motto);
 
-        
-        
+
+
     }
 }
 
@@ -120,22 +119,24 @@ function AssignData(data) {
             htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__Description" name="InvoiceList[' + cnt + '].Description" type="text" value="' + data.InvoiceList[cnt].Description + '" />';
             htm += '</div>';
             htm += '<div class="width15 ">';
-            htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__CodeSH" name="InvoiceList[' + cnt + '].CodeSH" type="text" value="' + data.InvoiceList[cnt].CodeSH + '" />';
+            htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__HSCode" name="InvoiceList[' + cnt + '].HSCode" type="text" value="' + data.InvoiceList[cnt].HSCode + '" />';
             htm += '</div>';
             htm += '<div class="width5 ">';
-            htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__Usagé" name="InvoiceList[' + cnt + '].Usagé" type="text" value="' + data.InvoiceList[cnt].Usagé + '" />';
+            htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__Usage" name="InvoiceList[' + cnt + '].Usage" type="text" value="' + data.InvoiceList[cnt].Usage + '" />';
             htm += '</div>';
             htm += '<div class="width9 ">';
-            htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__Quantité" name="InvoiceList[' + cnt + '].Quantité" type="text" value="' + data.InvoiceList[cnt].Quantité + '" />';
+            htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__Amount2" name="InvoiceList[' + cnt + '].Amount2" type="text" value="' + data.InvoiceList[cnt].Amount2 + '" />';
             htm += '</div>';
             htm += '<div class="width6 ">';
-            htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__Unite" name="InvoiceList[' + cnt + '].Unite" type="text" value="' + data.InvoiceList[cnt].Unite + '" />';
+            htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__Unit" name="InvoiceList[' + cnt + '].Unit" type="text" value="' + data.InvoiceList[cnt].Unit + '" />';
             htm += '</div>';
             htm += '<div class="width10 ">';
-            htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__FOBattestéendevise" name="InvoiceList[' + cnt + '].FOBattestéendevise" type="text" value="' + data.InvoiceList[cnt].FOBattestéendevise + '" />';
+            htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__FOBAttestedInCurrency2" name="InvoiceList[' + cnt + '].FOBAttestedInCurrency2" type="text" value="' + data.InvoiceList[cnt].FOBAttestedInCurrency2 + '" />';
+            //htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__FOBAttestedInCurrency2" name="InvoiceList[' + cnt + '].FOBAttestedInCurrency2 type="text" value="' + data.InvoiceList[cnt].FOBAttestedInCurrency2 + '" />';
             htm += '</div>';
             htm += '<div class="width15 ">';
-            htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__ValeurderéférenceenFCFA" name="InvoiceList[' + cnt + '].ValeurderéférenceenFCFA" type="text" value="' + data.InvoiceList[cnt].ValeurderéférenceenFCFA + '" />';
+            htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__ReferenceValueInFCFA2" name="InvoiceList[' + cnt + '].ReferenceValueInFCFA2" type="text" value="' + data.InvoiceList[cnt].ReferenceValueInFCFA2 + '" />';
+            //htm += '<input class="form-control"    id="InvoiceList_' + cnt + '__ReferenceValueInFCFA2" name="InvoiceList[' + cnt + '].ReferenceValueInFCFA2" type="text" value="' + data.InvoiceList[cnt].ReferenceValueInFCFA2 + '" />';
             htm += '</div>';
             htm += '</div>';
 

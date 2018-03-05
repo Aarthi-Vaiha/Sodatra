@@ -138,13 +138,85 @@
   <data name="setString3" xml:space="preserve">
     <value>CodeSH</value>
   </data>
-  <data name="uniteFOBatteste" xml:space="preserve">
-    <value>UniteFOBatteste</value>
+  <data name="UnitFOBatteste" xml:space="preserve">
+    <value>UnitFOBatteste</value>
   </data>
   <data name="UsageQuantite" xml:space="preserve">
     <value>UsageQuantite</value>
   </data>
   <data name="valeurdereference" xml:space="preserve">
     <value>Valeurdereference</value>
+  </data>
+  <data name="CodePPMText1" xml:space="preserve">
+    <value>CodePPM</value>
+  </data>
+  <data name="CodePPMText2" xml:space="preserve">
+    <value>CodePPm</value>
+  </data>
+  <data name="CodePPMText3" xml:space="preserve">
+    <value>NINEA</value>
+  </data>
+  <data name="CodePPMText4" xml:space="preserve">
+    <value>CcdePPM</value>
+  </data>
+  <data name="ConnaissementText1" xml:space="preserve">
+    <value>ConnaissementallLTA</value>
+  </data>
+  <data name="ConnaissementText2" xml:space="preserve">
+    <value>ConnaissemcntouLTA</value>
+  </data>
+  <data name="ConnaissementText3" xml:space="preserve">
+    <value>Connaissemenl</value>
+  </data>
+  <data name="ConnaissementText4" xml:space="preserve">
+    <value>Connaissement</value>
+  </data>
+  <data name="ContainersText1" xml:space="preserve">
+    <value>Conteneurs</value>
+  </data>
+  <data name="ContainersText2" xml:space="preserve">
+    <value>Centoneurs</value>
+  </data>
+  <data name="ContainersText3" xml:space="preserve">
+    <value>Conteneurs</value>
+  </data>
+  <data name="ContainersText4" xml:space="preserve">
+    <value>Conteneurs</value>
+  </data>
+  <data name="NatureofGoodsText1" xml:space="preserve">
+    <value>Naturedesmarchandiscs</value>
+  </data>
+  <data name="NatureofGoodsText2" xml:space="preserve">
+    <value>Naturedesmarchandises</value>
+  </data>
+  <data name="NatureofGoodsText3" xml:space="preserve">
+    <value>Naturedesmarchandis</value>
+  </data>
+  <data name="NatureofGoodsText4" xml:space="preserve">
+    <value>Naturcdesmarchandiscs</value>
+  </data>
+  <data name="NatureofPackagingText1" xml:space="preserve">
+    <value>NaturedeI'emballage</value>
+  </data>
+  <data name="NatureofPackagingText2" xml:space="preserve">
+    <value>NaturedeI'emballage</value>
+  </data>
+  <data name="NatureofPackagingText3" xml:space="preserve">
+    <value>NaturedeI'emballage</value>
+  </data>
+  <data name="NatureofPackagingText4" xml:space="preserve">
+    <value>NaturedeI'emballage</value>
+  </data>
+  <data name="VendorText1" xml:space="preserve">
+    <value>Vendeur(</value>
+  </data>
+  <data name="VendorText2" xml:space="preserve">
+    <value>Vcndeur(</value>
+  </data>
+  <data name="VendorText3" xml:space="preserve">
+    <value>Vend~~Jr(</value>
+  </data>
+  <data name="VendorText4" xml:space="preserve">
+    <value>Vendcur(</value>
   </data>
 </root>

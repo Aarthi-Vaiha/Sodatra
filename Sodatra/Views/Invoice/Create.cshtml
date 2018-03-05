@@ -1,0 +1,386 @@
+﻿@model Sodatra.Models.InvoiceModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Create", "Invoice", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <div class="width100">
+            <fieldset>
+                <div class="width27 margintop20">
+                    Text File
+                </div>
+
+                <div class="width27 margintop20">
+                    <input type="file" id="textFile" class="form-control" accept="text/plain*" value="">
+                </div>
+
+            </fieldset>
+        </div>
+        <br />
+        <hr />
+        <fieldset>
+            <legend style="background-color:darkgray;">Vendor Information</legend>
+
+            @*<hr />*@
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+
+            <div class="widthHeight100">
+                <div class="width20">
+                    Vendor
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.Vendor, new { @class = "form-control", tabindex = 1 })
+
+                </div>
+                <div class="width20">
+                    Importer
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.Importer, new { @class = "form-control", tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Number AV
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.NumberAV, new { @class = "datepicker form-control", tabindex = 3 })
+                </div>
+                <div class="width20">
+                    Delivery
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.Delivery, new { @class = "form-control", tabindex = 4 })
+                </div>
+
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Vendor Address
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.VendorAddress1, new { @class = "form-control", tabindex = 5 })
+                </div>
+                <div class="width20">
+                    Importer Address
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.ImporterAddress1, new { @class = "form-control", tabindex = 6 })
+                </div>
+
+                <div class="clearfix"></div>
+                <br />
+                <div class="width20"></div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.VendorAddress2, new { @class = "form-control" })
+                </div>
+                <div class="width20"></div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.ImporterAddress2, new { @class = "form-control" })
+                </div>
+                <div class="clearfix"></div>
+                <br />
+                <div class="width20"></div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.VendorAddress3, new { @class = "form-control" })
+                </div>
+                <div class="width20"></div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.ImporterAddress3, new { @class = "form-control" })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Number DPI
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.NumberDPI, new { @class = "form-control", tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Date DPI
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.DateDPI, new { @class = "form-control", tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Date AV
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.DateAV, new { @class = "form-control", tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Telephone
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.VendorTelephone, new { @class = "form-control", tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Telephone
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.ImporterTelephone, new { @class = "form-control", tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Fax
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.VendorFax, new { @class = "form-control", tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Fax
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.ImporterFax, new { @class = "form-control", tabindex = 2 })
+                </div>
+
+
+                <div class="width20">
+                    Contact
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.VendorContact, new { @class = "form-control", tabindex = 1 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+
+                <div class="width20">
+                    Contact
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.ImporterContact, new { @class = "form-control", tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Weight Gross(KG)
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.WeightGross, new { @class = "form-control", tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Weight Net(KG)
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.WeightNet, new { @class = "form-control", tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Ninea
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.Ninea, new { @class = "form-control", tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Code PPM
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.CodePPM, new { @class = "form-control", tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Country of Orgin
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.CountryofOrgin, new { @class = "form-control", tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Tax Payer Code
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.TaxPayerCode, new { @class = "form-control", tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Containers and Leads
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.Containersandleads, new { @class = "form-control", tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Nature of Goods
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.NatureofGoods, new { @class = "form-control", tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Nature of Packaging
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.NatureofPackaging, new { @class = "form-control", tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Marks and Parcel Numbers
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.MarksandParcelNumbers, new { @class = "form-control", tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Place of Entry
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.PlaceofEntry, new { @class = "form-control", tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    At
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.At, new { @class = "form-control", tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Bill
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.Bill, new { @class = "form-control", tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Sure
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.Sure, new { @class = "form-control", tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Incoterm
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.Incoterm, new { @class = "form-control", tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Bill of Lading or LTA
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.BillofLading, new { @class = "form-control", tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Total Bill
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.TotalBill, new { @class = "form-control", tabindex = 2 })
+                </div>
+            </div>
+            <br />
+            <div class="widthHeight100">
+                <div class="width20">
+                    Date
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.Date, new { @class = "form-control", tabindex = 1 })
+                </div>
+                <div class="width20">
+                    Motto
+                </div>
+                <div class="width28">
+                    @Html.TextBoxFor(model => model.Motto, new { @class = "form-control", tabindex = 2 })
+                </div>
+            </div>
+            <br />
+
+            <br />
+            <br />
+
+        </fieldset>
+
+        <br />
+        <fieldset>
+            <legend style="background-color:darkgray;">HS Code Information</legend>
+            <div class="width100">
+                <div class="width5">
+                    No
+                </div>
+                <div class="width30">
+                    Description
+                </div>
+                <div class="width15">
+                    HS Code
+                </div>
+                <div class="width5">
+                    Usagé
+                </div>
+                <div class="width9">
+                    Quantité
+                </div>
+                <div class="width6">
+                    Unite
+                </div>
+                <div class="width10">
+                    FOBattesté
+                    @*FOBattestéendevise*@
+                </div>
+                <div class="width15">
+                    FCFA
+                    @*ValeurderéférenceenFCFA*@
+                </div>
+            </div>
+            <div id="DescriptionList">
+            </div>
+        </fieldset>
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-4">
+                <input type="submit" value="Save" class="btn btn-success" />
+                <input type="button" value="Cancel" onclick="BackToList();" class="btn btn-danger" />
+            </div>
+        </div>
+    </div>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/Sodatra/Invoice.js"></script>
+    <script type="text/javascript">
+        var url_UploadFiles = '@Url.Content("~/Invoice/UploadFiles/")';
+        var url_GetTextFilesData = '@Url.Content("~/Invoice/GetTextFilesData/")';
+
+
+
+        var url_BackTolist = '@Url.Content("~/Invoice/Index/")';
+        function BackToList() {
+            window.location = url_BackTolist;
+        }
+    </script>
+}
+
+

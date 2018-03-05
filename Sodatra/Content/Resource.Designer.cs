@@ -61,6 +61,114 @@ namespace Sodatra.Content {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CodePPM.
+        /// </summary>
+        internal static string CodePPMText1 {
+            get {
+                return ResourceManager.GetString("CodePPMText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CodePPm.
+        /// </summary>
+        internal static string CodePPMText2 {
+            get {
+                return ResourceManager.GetString("CodePPMText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NINEA.
+        /// </summary>
+        internal static string CodePPMText3 {
+            get {
+                return ResourceManager.GetString("CodePPMText3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CcdePPM.
+        /// </summary>
+        internal static string CodePPMText4 {
+            get {
+                return ResourceManager.GetString("CodePPMText4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ConnaissementallLTA.
+        /// </summary>
+        internal static string ConnaissementText1 {
+            get {
+                return ResourceManager.GetString("ConnaissementText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ConnaissemcntouLTA.
+        /// </summary>
+        internal static string ConnaissementText2 {
+            get {
+                return ResourceManager.GetString("ConnaissementText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Connaissemenl.
+        /// </summary>
+        internal static string ConnaissementText3 {
+            get {
+                return ResourceManager.GetString("ConnaissementText3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Connaissement.
+        /// </summary>
+        internal static string ConnaissementText4 {
+            get {
+                return ResourceManager.GetString("ConnaissementText4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conteneurs.
+        /// </summary>
+        internal static string ContainersText1 {
+            get {
+                return ResourceManager.GetString("ContainersText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Centoneurs.
+        /// </summary>
+        internal static string ContainersText2 {
+            get {
+                return ResourceManager.GetString("ContainersText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conteneurs.
+        /// </summary>
+        internal static string ContainersText3 {
+            get {
+                return ResourceManager.GetString("ContainersText3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conteneurs.
+        /// </summary>
+        internal static string ContainersText4 {
+            get {
+                return ResourceManager.GetString("ContainersText4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         internal static string description {
@@ -84,6 +192,78 @@ namespace Sodatra.Content {
         internal static string enFCFA {
             get {
                 return ResourceManager.GetString("enFCFA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Naturedesmarchandiscs.
+        /// </summary>
+        internal static string NatureofGoodsText1 {
+            get {
+                return ResourceManager.GetString("NatureofGoodsText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Naturedesmarchandises.
+        /// </summary>
+        internal static string NatureofGoodsText2 {
+            get {
+                return ResourceManager.GetString("NatureofGoodsText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Naturedesmarchandis.
+        /// </summary>
+        internal static string NatureofGoodsText3 {
+            get {
+                return ResourceManager.GetString("NatureofGoodsText3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Naturcdesmarchandiscs.
+        /// </summary>
+        internal static string NatureofGoodsText4 {
+            get {
+                return ResourceManager.GetString("NatureofGoodsText4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NaturedeI&apos;emballage.
+        /// </summary>
+        internal static string NatureofPackagingText1 {
+            get {
+                return ResourceManager.GetString("NatureofPackagingText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NaturedeI&apos;emballage.
+        /// </summary>
+        internal static string NatureofPackagingText2 {
+            get {
+                return ResourceManager.GetString("NatureofPackagingText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NaturedeI&apos;emballage.
+        /// </summary>
+        internal static string NatureofPackagingText3 {
+            get {
+                return ResourceManager.GetString("NatureofPackagingText3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NaturedeI&apos;emballage.
+        /// </summary>
+        internal static string NatureofPackagingText4 {
+            get {
+                return ResourceManager.GetString("NatureofPackagingText4", resourceCulture);
             }
         }
         
@@ -124,11 +304,11 @@ namespace Sodatra.Content {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UniteFOBatteste.
+        ///   Looks up a localized string similar to UnitFOBatteste.
         /// </summary>
-        internal static string uniteFOBatteste {
+        internal static string UnitFOBatteste {
             get {
-                return ResourceManager.GetString("uniteFOBatteste", resourceCulture);
+                return ResourceManager.GetString("UnitFOBatteste", resourceCulture);
             }
         }
         
@@ -147,6 +327,42 @@ namespace Sodatra.Content {
         internal static string valeurdereference {
             get {
                 return ResourceManager.GetString("valeurdereference", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vendeur(.
+        /// </summary>
+        internal static string VendorText1 {
+            get {
+                return ResourceManager.GetString("VendorText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vcndeur(.
+        /// </summary>
+        internal static string VendorText2 {
+            get {
+                return ResourceManager.GetString("VendorText2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vend~~Jr(.
+        /// </summary>
+        internal static string VendorText3 {
+            get {
+                return ResourceManager.GetString("VendorText3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vendcur(.
+        /// </summary>
+        internal static string VendorText4 {
+            get {
+                return ResourceManager.GetString("VendorText4", resourceCulture);
             }
         }
     }

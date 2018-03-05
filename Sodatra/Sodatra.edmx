@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SodatraModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Table_SodatraDetails">
+          <Key>
+            <PropertyRef Name="SodatraId" />
+          </Key>
+          <Property Name="SodatraId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Vendor" Type="nvarchar" MaxLength="150" />
+          <Property Name="Importer" Type="nvarchar" MaxLength="150" />
+          <Property Name="NumberAV" Type="nvarchar" MaxLength="150" />
+          <Property Name="Delivery" Type="nvarchar" MaxLength="150" />
+          <Property Name="VendorAddress1" Type="nvarchar(max)" />
+          <Property Name="ImporterAddress1" Type="nvarchar(max)" />
+          <Property Name="VendorAddress2" Type="nvarchar(max)" />
+          <Property Name="ImporterAddress2" Type="nvarchar(max)" />
+          <Property Name="VendorAddress3" Type="nvarchar(max)" />
+          <Property Name="ImporterAddress3" Type="nvarchar(max)" />
+          <Property Name="NumberDPI" Type="nvarchar" MaxLength="150" />
+          <Property Name="DateDPI" Type="nvarchar" MaxLength="150" />
+          <Property Name="DateAV" Type="nvarchar" MaxLength="150" />
+          <Property Name="VendorTelephone" Type="nvarchar" MaxLength="150" />
+          <Property Name="ImporterTelephone" Type="nvarchar" MaxLength="150" />
+          <Property Name="VendorFax" Type="nvarchar" MaxLength="150" />
+          <Property Name="ImporterFax" Type="nvarchar" MaxLength="150" />
+          <Property Name="VendorContact" Type="nvarchar" MaxLength="150" />
+          <Property Name="ImporterContact" Type="nvarchar" MaxLength="150" />
+          <Property Name="WeightGross" Type="nvarchar" MaxLength="150" />
+          <Property Name="WeightNet" Type="nvarchar" MaxLength="150" />
+          <Property Name="Ninea" Type="nvarchar" MaxLength="150" />
+          <Property Name="CodePPM" Type="nvarchar" MaxLength="150" />
+          <Property Name="CountryofOrgin" Type="nvarchar" MaxLength="150" />
+          <Property Name="TaxPayerCode" Type="nvarchar" MaxLength="150" />
+          <Property Name="Containersandleads" Type="nvarchar" MaxLength="150" />
+          <Property Name="NatureofGoods" Type="nvarchar" MaxLength="150" />
+          <Property Name="NatureofPackaging" Type="nvarchar" MaxLength="150" />
+          <Property Name="MarksandParcelNumbers" Type="nvarchar" MaxLength="150" />
+          <Property Name="PlaceofEntry" Type="nvarchar" MaxLength="150" />
+          <Property Name="At" Type="nvarchar" MaxLength="150" />
+          <Property Name="The" Type="nvarchar" MaxLength="150" />
+          <Property Name="Bill" Type="nvarchar" MaxLength="150" />
+          <Property Name="Sure" Type="nvarchar" MaxLength="150" />
+          <Property Name="Incoterm" Type="nvarchar" MaxLength="150" />
+          <Property Name="BillofLading" Type="nvarchar" MaxLength="150" />
+          <Property Name="TotalBill" Type="nvarchar" MaxLength="150" />
+          <Property Name="Date" Type="nvarchar" MaxLength="150" />
+          <Property Name="Motto" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Table_SodatraItemDetails">
+          <Key>
+            <PropertyRef Name="SodatraItemId" />
+          </Key>
+          <Property Name="SodatraItemId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SodatraId" Type="bigint" Nullable="false" />
+          <Property Name="No" Type="int" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="HSCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Usage" Type="nvarchar" MaxLength="50" />
+          <Property Name="Amount" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="FOBAttestedInCurrency" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ReferenceValueInFCFA" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <Association Name="FK_Table_SodatraItemDetails_Table_SodatraDetails">
+          <End Role="Table_SodatraDetails" Type="Self.Table_SodatraDetails" Multiplicity="1" />
+          <End Role="Table_SodatraItemDetails" Type="Self.Table_SodatraItemDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_SodatraDetails">
+              <PropertyRef Name="SodatraId" />
+            </Principal>
+            <Dependent Role="Table_SodatraItemDetails">
+              <PropertyRef Name="SodatraId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SodatraModelStoreContainer">
+          <EntitySet Name="Table_SodatraDetails" EntityType="Self.Table_SodatraDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_SodatraItemDetails" EntityType="Self.Table_SodatraItemDetails" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Table_SodatraItemDetails_Table_SodatraDetails" Association="Self.FK_Table_SodatraItemDetails_Table_SodatraDetails">
+            <End Role="Table_SodatraDetails" EntitySet="Table_SodatraDetails" />
+            <End Role="Table_SodatraItemDetails" EntitySet="Table_SodatraItemDetails" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SodatraModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SodatraEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Table_SodatraDetails" EntityType="SodatraModel.Table_SodatraDetails" />
+          <EntitySet Name="Table_SodatraItemDetails" EntityType="SodatraModel.Table_SodatraItemDetails" />
+          <AssociationSet Name="FK_Table_SodatraItemDetails_Table_SodatraDetails" Association="SodatraModel.FK_Table_SodatraItemDetails_Table_SodatraDetails">
+            <End Role="Table_SodatraDetails" EntitySet="Table_SodatraDetails" />
+            <End Role="Table_SodatraItemDetails" EntitySet="Table_SodatraItemDetails" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Table_SodatraDetails">
+          <Key>
+            <PropertyRef Name="SodatraId" />
+          </Key>
+          <Property Name="SodatraId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Vendor" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Importer" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NumberAV" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Delivery" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="VendorAddress1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ImporterAddress1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorAddress2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ImporterAddress2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VendorAddress3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ImporterAddress3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NumberDPI" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="DateDPI" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="DateAV" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="VendorTelephone" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ImporterTelephone" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="VendorFax" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ImporterFax" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="VendorContact" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ImporterContact" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="WeightGross" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="WeightNet" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Ninea" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="CodePPM" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="CountryofOrgin" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="TaxPayerCode" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Containersandleads" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NatureofGoods" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NatureofPackaging" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="MarksandParcelNumbers" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="PlaceofEntry" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="At" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="The" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Bill" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Sure" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Incoterm" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="BillofLading" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="TotalBill" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Motto" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Table_SodatraItemDetails" Relationship="SodatraModel.FK_Table_SodatraItemDetails_Table_SodatraDetails" FromRole="Table_SodatraDetails" ToRole="Table_SodatraItemDetails" />
+        </EntityType>
+        <EntityType Name="Table_SodatraItemDetails">
+          <Key>
+            <PropertyRef Name="SodatraItemId" />
+          </Key>
+          <Property Name="SodatraItemId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SodatraId" Type="Int64" Nullable="false" />
+          <Property Name="No" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HSCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Usage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FOBAttestedInCurrency" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ReferenceValueInFCFA" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="Table_SodatraDetails" Relationship="SodatraModel.FK_Table_SodatraItemDetails_Table_SodatraDetails" FromRole="Table_SodatraItemDetails" ToRole="Table_SodatraDetails" />
+        </EntityType>
+        <Association Name="FK_Table_SodatraItemDetails_Table_SodatraDetails">
+          <End Type="SodatraModel.Table_SodatraDetails" Role="Table_SodatraDetails" Multiplicity="1" />
+          <End Type="SodatraModel.Table_SodatraItemDetails" Role="Table_SodatraItemDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_SodatraDetails">
+              <PropertyRef Name="SodatraId" />
+            </Principal>
+            <Dependent Role="Table_SodatraItemDetails">
+              <PropertyRef Name="SodatraId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SodatraModelStoreContainer" CdmEntityContainer="SodatraEntities">
+          <EntitySetMapping Name="Table_SodatraDetails">
+            <EntityTypeMapping TypeName="SodatraModel.Table_SodatraDetails">
+              <MappingFragment StoreEntitySet="Table_SodatraDetails">
+                <ScalarProperty Name="Motto" ColumnName="Motto" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="TotalBill" ColumnName="TotalBill" />
+                <ScalarProperty Name="BillofLading" ColumnName="BillofLading" />
+                <ScalarProperty Name="Incoterm" ColumnName="Incoterm" />
+                <ScalarProperty Name="Sure" ColumnName="Sure" />
+                <ScalarProperty Name="Bill" ColumnName="Bill" />
+                <ScalarProperty Name="The" ColumnName="The" />
+                <ScalarProperty Name="At" ColumnName="At" />
+                <ScalarProperty Name="PlaceofEntry" ColumnName="PlaceofEntry" />
+                <ScalarProperty Name="MarksandParcelNumbers" ColumnName="MarksandParcelNumbers" />
+                <ScalarProperty Name="NatureofPackaging" ColumnName="NatureofPackaging" />
+                <ScalarProperty Name="NatureofGoods" ColumnName="NatureofGoods" />
+                <ScalarProperty Name="Containersandleads" ColumnName="Containersandleads" />
+                <ScalarProperty Name="TaxPayerCode" ColumnName="TaxPayerCode" />
+                <ScalarProperty Name="CountryofOrgin" ColumnName="CountryofOrgin" />
+                <ScalarProperty Name="CodePPM" ColumnName="CodePPM" />
+                <ScalarProperty Name="Ninea" ColumnName="Ninea" />
+                <ScalarProperty Name="WeightNet" ColumnName="WeightNet" />
+                <ScalarProperty Name="WeightGross" ColumnName="WeightGross" />
+                <ScalarProperty Name="ImporterContact" ColumnName="ImporterContact" />
+                <ScalarProperty Name="VendorContact" ColumnName="VendorContact" />
+                <ScalarProperty Name="ImporterFax" ColumnName="ImporterFax" />
+                <ScalarProperty Name="VendorFax" ColumnName="VendorFax" />
+                <ScalarProperty Name="ImporterTelephone" ColumnName="ImporterTelephone" />
+                <ScalarProperty Name="VendorTelephone" ColumnName="VendorTelephone" />
+                <ScalarProperty Name="DateAV" ColumnName="DateAV" />
+                <ScalarProperty Name="DateDPI" ColumnName="DateDPI" />
+                <ScalarProperty Name="NumberDPI" ColumnName="NumberDPI" />
+                <ScalarProperty Name="ImporterAddress3" ColumnName="ImporterAddress3" />
+                <ScalarProperty Name="VendorAddress3" ColumnName="VendorAddress3" />
+                <ScalarProperty Name="ImporterAddress2" ColumnName="ImporterAddress2" />
+                <ScalarProperty Name="VendorAddress2" ColumnName="VendorAddress2" />
+                <ScalarProperty Name="ImporterAddress1" ColumnName="ImporterAddress1" />
+                <ScalarProperty Name="VendorAddress1" ColumnName="VendorAddress1" />
+                <ScalarProperty Name="Delivery" ColumnName="Delivery" />
+                <ScalarProperty Name="NumberAV" ColumnName="NumberAV" />
+                <ScalarProperty Name="Importer" ColumnName="Importer" />
+                <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+                <ScalarProperty Name="SodatraId" ColumnName="SodatraId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_SodatraItemDetails">
+            <EntityTypeMapping TypeName="SodatraModel.Table_SodatraItemDetails">
+              <MappingFragment StoreEntitySet="Table_SodatraItemDetails">
+                <ScalarProperty Name="ReferenceValueInFCFA" ColumnName="ReferenceValueInFCFA" />
+                <ScalarProperty Name="FOBAttestedInCurrency" ColumnName="FOBAttestedInCurrency" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Usage" ColumnName="Usage" />
+                <ScalarProperty Name="HSCode" ColumnName="HSCode" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="SodatraId" ColumnName="SodatraId" />
+                <ScalarProperty Name="SodatraItemId" ColumnName="SodatraItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
