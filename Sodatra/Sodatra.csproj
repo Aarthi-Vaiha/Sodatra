@@ -84,6 +84,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -216,7 +218,28 @@
     <Compile Include="Models\InvoiceModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sodatra.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sodatra.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sodatra.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sodatra.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sodatra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sodatra.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Table_SodatraDetails.cs">
+      <DependentUpon>Sodatra.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Table_SodatraItemDetails.cs">
+      <DependentUpon>Sodatra.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -243,6 +266,16 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\Sodatra\Invoice.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Sodatra.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Sodatra.edmx</DependentUpon>
+      <LastGenOutput>Sodatra.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Sodatra.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Sodatra.edmx</DependentUpon>
+      <LastGenOutput>Sodatra.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -279,6 +312,15 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Invoice.cshtml" />
     <Content Include="Views\Invoice\Index.cshtml" />
+    <Content Include="Views\Invoice\Create.cshtml" />
+    <EntityDeploy Include="Sodatra.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Sodatra.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Sodatra.edmx.diagram">
+      <DependentUpon>Sodatra.edmx</DependentUpon>
+    </Content>
+    <Content Include="Views\Invoice\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -297,6 +339,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
